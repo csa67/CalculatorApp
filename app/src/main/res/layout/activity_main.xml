@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:gravity="bottom">
+
+    <EditText
+        android:textSize="30sp"
+        android:gravity="end"
+        android:text=""
+        android:padding="10dp"
+        android:id="@+id/edtCalc"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text=""
+        android:maxLines="1"
+        android:padding="10dp"
+        android:textSize="30sp"
+        android:gravity="end"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtCalc" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="4"
+        android:rowCount="4" >
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/shapesquare"
+            app:backgroundTint="@color/DarkGray"
+            android:text="C"
+            android:textSize="20sp"
+            android:onClick="clearPressed" />
+
+        <Button
+            android:id="@+id/btnParanthesis"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/shapesquare"
+            app:backgroundTint="@color/DarkGray"
+            android:text="( )"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btnModulus"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/shapesquare"
+            app:backgroundTint="@color/DarkGray"
+            android:text="%"
+            android:textSize="20sp"
+            android:onClick="percentPressed" />
+
+        <Button
+            android:id="@+id/btnDivide"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/shapesquare"
+            app:backgroundTint="@color/DarkGray"
+            android:textSize="20sp"
+            android:text="/"
+            android:onClick="opPressed"/>
+
+        <Button
+            android:id="@+id/btnSeven"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/shapesquare"
+            android:textSize="20sp"
+            android:text="7"
+            android:onClick="digitPressed"/>
+
+        <Button
+            android:id="@+id/btnEight"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/shapesquare"
+            android:textSize="20sp"
+            android:text="8"
+            android:onClick="digitPressed"/>
+
+        <Button
+            android:id="@+id/btnNine"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/shapesquare"
+            android:textSize="20sp"
+            android:text="9"
+            android:onClick="digitPressed"/>
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/shapesquare"
+            app:backgroundTint="@color/DarkGray"
+            android:textSize="20sp"
+            android:text="+"
+            android:onClick="opPressed"/>
+
+        <Button
+            android:id="@+id/btnFour"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:textSize="20sp"
+            android:background="@drawable/shapesquare"
+            android:text="4"
+            android:onClick="digitPressed"/>
+
+        <Button
+            android:id="@+id/btnFive"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/shapesquare"
+            android:textSize="20sp"
+            android:text="5"
+            android:onClick="digitPressed"/>
+
+        <Button
+            android:id="@+id/btnSix"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/shapesquare"
+            android:textSize="20sp"
+            android:text="6"
+            android:onClick="digitPressed"/>
+
+        <Button
+            android:id="@+id/btnSubtract"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/shapesquare"
+            app:backgroundTint="@color/DarkGray"
+            android:textSize="25sp"
+            android:text="-"
+            android:onClick="opPressed"/>
+
+        <Button
+            android:id="@+id/btnOne"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/shapesquare"
+            android:text="1"
+            android:textSize="20sp"
+            android:onClick="digitPressed"/>
+
+        <Button
+            android:id="@+id/btnTwo"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/shapesquare"
+            android:text="2"
+            android:textSize="20sp"
+            android:onClick="digitPressed"/>
+
+        <Button
+            android:id="@+id/btnThree"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/shapesquare"
+            android:text="3"
+            android:textSize="20sp"
+            android:onClick="digitPressed"/>
+
+        <Button
+            android:id="@+id/btnMultiply"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/shapesquare"
+            app:backgroundTint="@color/DarkGray"
+            android:text="*"
+            android:onClick="opPressed"/>
+
+        <Button
+            android:id="@+id/btnZero"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/shapesquare"
+            android:text="0"
+            android:layout_columnSpan="2"
+            android:textSize="20sp"
+            android:onClick="digitPressed"/>
+
+        <Button
+            android:id="@+id/btnDot"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/shapesquare"
+            android:text="."
+            android:onClick="digitPressed"
+            android:textSize="25sp"/>
+
+        <Button
+            android:id="@+id/btnEquals"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:textSize="30sp"
+            android:background="@drawable/shapesquare"
+            app:backgroundTint="@color/Orange"
+            android:text="="
+            android:onClick="equalPressed"
+            android:elevation="5dp"/>
+
+
+
+
+
+
+    </GridLayout>
+
+</LinearLayout>
